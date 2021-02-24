@@ -1,0 +1,1 @@
+cd ..\Code_Blocks\PartitionF\bin\Debug\ & Start PartitionF.exe

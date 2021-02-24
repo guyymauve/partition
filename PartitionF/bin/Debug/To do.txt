@@ -1,0 +1,20 @@
+-Note :
+	-Trait
+	-Clés
+-Début :
+	-Clés
+-Nuance : 
+	-Tout
+-Crescendo :
+	-Tout
+-Partition : 
+	-Faire en sorte de ne pas couper les mesures
+
+=================================================
+
+-Note :
+	-Bémol
+-Octaves supèrieures/infèrieures
+-Gammes
+-Repetitions
+-Lier les croches et double croches
