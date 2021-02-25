@@ -36,40 +36,40 @@ SDL_Surface* Note::afficher(SDL_Surface* ecran, int* taille)
     switch (m_type)
     {
     case DCROCHE :
-        note = SDL_LoadBMP("dcroche.bmp");
+        note = SDL_LoadBMP("./images/dcroche.bmp");
         if ((m_octave == 4) && (m_hauteur != DO))
         {
-            note = SDL_LoadBMP("dcroche2.bmp");
+            note = SDL_LoadBMP("./images/dcroche2.bmp");
             positionDiese.y = -5;
         }
         break;
     case CROCHE :
-        note = SDL_LoadBMP("croche.bmp");
+        note = SDL_LoadBMP("./images/croche.bmp");
         if ((m_octave == 4) && (m_hauteur != DO))
         {
-            note = SDL_LoadBMP("croche2.bmp");
+            note = SDL_LoadBMP("./images/croche2.bmp");
             positionDiese.y = -5;
             positionPoint.x = 4;
         }
         break;
     case NOIRE :
-        note = SDL_LoadBMP("noire.bmp");
+        note = SDL_LoadBMP("./images/noire.bmp");
         if ((m_octave == 4) && (m_hauteur != DO))
         {
-            note = SDL_LoadBMP("noire2.bmp");
+            note = SDL_LoadBMP("./images/noire2.bmp");
             positionDiese.y = -5;
         }
         break;
     case BLANCHE :
-        note = SDL_LoadBMP("blanche.bmp");
+        note = SDL_LoadBMP("./images/blanche.bmp");
         if ((m_octave == 4) && (m_hauteur != DO))
         {
-            note = SDL_LoadBMP("blanche2.bmp");
+            note = SDL_LoadBMP("./images/blanche2.bmp");
             positionDiese.y = -5;
         }
         break;
     case RONDE :
-        note = SDL_LoadBMP("ronde.bmp");
+        note = SDL_LoadBMP("./images/ronde.bmp");
         break;
     }
 
@@ -168,7 +168,7 @@ SDL_Surface* Note::afficher(SDL_Surface* ecran, int* taille)
         positionNote.y += 5;
 
     if (m_diese)
-        diese = SDL_LoadBMP("diese.bmp");
+        diese = SDL_LoadBMP("./images/diese.bmp");
 
     if (diese != NULL)
     {
@@ -181,7 +181,7 @@ SDL_Surface* Note::afficher(SDL_Surface* ecran, int* taille)
 
     if (m_point)
     {
-        point = SDL_LoadBMP("point.bmp");
+        point = SDL_LoadBMP("./images/point.bmp");
         SDL_SetColorKey(point, SDL_SRCCOLORKEY, SDL_MapRGB(point->format, 0, 255, 0));
         SDL_BlitSurface(point, NULL, ecran, &positionPoint);
         *taille += 8;

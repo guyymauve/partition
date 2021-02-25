@@ -28,13 +28,9 @@ int main ( int argc, char** argv )
     SDL_Surface *barre(NULL);
     SDL_Surface *bois(NULL);
     SDL_Surface *icone(NULL);
-    SDL_Surface *chocolatine(NULL);
-    SDL_Surface *aesthetic(NULL);
-    SDL_Surface *cope(NULL);
     SDL_Event event;
     SDL_Rect positionPart;
     SDL_Rect positionPortee;
-    SDL_Rect positionCope;
 
     positionPart.x = 50;
     positionPart.y = 65;
@@ -49,7 +45,7 @@ int main ( int argc, char** argv )
 
     atexit(SDL_Quit);
 
-    icone = SDL_LoadBMP("icone.bmp");
+    icone = SDL_LoadBMP("./images/icone.bmp");
     SDL_WM_SetIcon(icone, NULL);
 
     ecran = SDL_SetVideoMode(1300, 825, 32, SDL_HWSURFACE | SDL_DOUBLEBUF);
@@ -62,25 +58,16 @@ int main ( int argc, char** argv )
     SDL_WM_SetCaption("My Part'", NULL);
     SDL_FillRect(ecran, NULL, SDL_MapRGB(ecran->format, 136, 66, 29));
 
-    bois = SDL_LoadBMP("bois.bmp");
+    bois = SDL_LoadBMP("./images/bois.bmp");
     SDL_BlitSurface(bois, NULL, ecran, 0);
 
-    page = SDL_LoadBMP("papier.bmp");
+    page = SDL_LoadBMP("./images/papier.bmp");
     SDL_BlitSurface(page, NULL, ecran, &positionPart);
 
-    barre = SDL_LoadBMP("barre.bmp");
+    barre = SDL_LoadBMP("./images/barre.bmp");
     SDL_BlitSurface(barre, NULL, ecran, 0);
 
-    chocolatine = SDL_LoadBMP("chocolatine.bmp");
-    aesthetic = SDL_LoadBMP("aesthetic.bmp");
-    cope = SDL_LoadBMP("cope.bmp");
-    SDL_SetColorKey(cope, SDL_SRCCOLORKEY, SDL_MapRGB(cope->format, 0, 255, 0));
-
-    positionCope.x = ecran->w-cope->w;
-    positionCope.y = ecran->h-cope->h;
-
-
-    portees = SDL_LoadBMP("portee.bmp");
+    portees = SDL_LoadBMP("./images/portee.bmp");
     SDL_SetColorKey(portees, SDL_SRCCOLORKEY, SDL_MapRGB(portees->format, 0, 255, 0));
     SDL_BlitSurface(portees, NULL, ecran, &positionPortee);
     for (i = 0 ; i < 5 ; i++)
@@ -95,8 +82,6 @@ int main ( int argc, char** argv )
     ecran = partition1.afficher(ecran);
 
     SDL_Flip(ecran);
-
-    int compteurChoco(0);
 
     while (continuer)
     {
@@ -113,9 +98,6 @@ int main ( int argc, char** argv )
             case SDLK_ESCAPE: //Echap
                 continuer = 0;
                 break;
-            case SDLK_c:
-                compteurChoco++;
-                break;
             default:
                 break;
             }
@@ -123,21 +105,12 @@ int main ( int argc, char** argv )
         default:
                break;
         }
-        if (compteurChoco == 5)
-            SDL_BlitSurface(chocolatine, NULL, ecran, 0);
-        if (compteurChoco == 10)
-            SDL_BlitSurface(cope, NULL, ecran , &positionCope);
-        if (compteurChoco == 15)
-            SDL_BlitSurface(aesthetic, NULL, ecran, 0);
         SDL_Flip(ecran);
     }
 
     SDL_FreeSurface(page);
     SDL_FreeSurface(barre);
     SDL_FreeSurface(bois);
-    SDL_FreeSurface(chocolatine);
-    SDL_FreeSurface(aesthetic);
-    SDL_FreeSurface(cope);
 
     SDL_Quit();
 

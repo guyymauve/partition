@@ -101,12 +101,12 @@ SDL_Surface* Partition::afficher(SDL_Surface* ecran)
     positionPortee.x = 55;
     positionPortee.y = 20;
 
-    SDL_Surface* barreMesure(SDL_LoadBMP("barreM.bmp"));
+    SDL_Surface* barreMesure(SDL_LoadBMP("./images/barreM.bmp"));
     SDL_Rect positionBarre;
 
     positionBarre.y = 96;
 
-    SDL_Surface* barreMesure2(SDL_LoadBMP("barreD.bmp"));
+    SDL_Surface* barreMesure2(SDL_LoadBMP("./images/barreD.bmp"));
     SDL_Rect positionBarre2;
 
     positionBarre2.y = 96;
@@ -179,7 +179,7 @@ SDL_Surface* Partition::afficher(SDL_Surface* ecran)
             }
         }
     }
-    SDL_Surface* barreMesure3(SDL_LoadBMP("barreF.bmp"));
+    SDL_Surface* barreMesure3(SDL_LoadBMP("./images/barreF.bmp"));
     positionBarre.x = *taille;
     SDL_BlitSurface(barreMesure3, NULL, portee, &positionBarre);
 

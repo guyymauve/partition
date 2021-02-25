@@ -25,23 +25,23 @@ SDL_Surface* Silence::afficher(SDL_Surface* ecran, int* taille)
     switch (m_typeS)
     {
     case QUARTSOUPIR :
-        silence = SDL_LoadBMP("qsoupir.bmp");
+        silence = SDL_LoadBMP("./images/qsoupir.bmp");
         positionSilence.y = 34 + 75;
         break;
     case DEMISOUPIR :
-        silence = SDL_LoadBMP("dsoupir.bmp");
+        silence = SDL_LoadBMP("./images/dsoupir.bmp");
         positionSilence.y = 31 + 75;
         break;
     case SOUPIR :
-        silence = SDL_LoadBMP("soupir.bmp");
+        silence = SDL_LoadBMP("./images/soupir.bmp");
         positionSilence.y = 18 + 75;
         break;
     case DEMIPAUSE :
-        silence = SDL_LoadBMP("dpause.bmp");
+        silence = SDL_LoadBMP("./images/dpause.bmp");
         positionSilence.y = 34 + 75;
         break;
     case PAUSE :
-        silence = SDL_LoadBMP("pause.bmp");
+        silence = SDL_LoadBMP("./images/pause.bmp");
         positionSilence.y = 28 + 75;
         break;
     }
@@ -49,7 +49,7 @@ SDL_Surface* Silence::afficher(SDL_Surface* ecran, int* taille)
 
     if (m_point)
     {
-        SDL_Surface* point = SDL_LoadBMP("point.bmp");
+        SDL_Surface* point = SDL_LoadBMP("./images/point.bmp");
         SDL_Rect positionPoint;
         positionPoint.x = positionSilence.x + silence->w;
         positionPoint.y = 116;

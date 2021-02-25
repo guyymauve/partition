@@ -26,7 +26,7 @@ SDL_Surface* Debut::afficher(SDL_Surface* ecranBis, int* taille)
     positionCle.x = *taille;
     positionCle.y = 81;
 
-    cle = SDL_LoadBMP("cleSol.bmp");
+    cle = SDL_LoadBMP("./images/cleSol.bmp");
     SDL_SetColorKey(cle, SDL_SRCCOLORKEY, SDL_MapRGB(cle->format, 0, 255, 0));
     SDL_BlitSurface(cle, NULL, ecranBis, &positionCle);
 
@@ -38,50 +38,50 @@ SDL_Surface* Debut::afficher(SDL_Surface* ecranBis, int* taille)
     switch (m_numerateur)
     {
     case 1:
-        numerateurS = SDL_LoadBMP("1.bmp");
+        numerateurS = SDL_LoadBMP("./images/1.bmp");
         break;
     case 2:
-        numerateurS = SDL_LoadBMP("2.bmp");
+        numerateurS = SDL_LoadBMP("./images/2.bmp");
         break;
     case 3:
-        numerateurS = SDL_LoadBMP("3.bmp");
+        numerateurS = SDL_LoadBMP("./images/3.bmp");
         break;
     case 4:
-        numerateurS = SDL_LoadBMP("4.bmp");
+        numerateurS = SDL_LoadBMP("./images/4.bmp");
         break;
     case 5:
-        numerateurS = SDL_LoadBMP("5.bmp");
+        numerateurS = SDL_LoadBMP("./images/5.bmp");
         break;
     case 6:
-        numerateurS = SDL_LoadBMP("6.bmp");
+        numerateurS = SDL_LoadBMP("./images/6.bmp");
         break;
     case 8:
-        numerateurS = SDL_LoadBMP("8.bmp");
+        numerateurS = SDL_LoadBMP("./images/8.bmp");
         break;
     }
 
     switch (m_denominateur)
     {
     case 1:
-        denominateurS = SDL_LoadBMP("1.bmp");
+        denominateurS = SDL_LoadBMP("./images/.bmp");
         break;
     case 2:
-        denominateurS = SDL_LoadBMP("2.bmp");
+        denominateurS = SDL_LoadBMP("./images/2.bmp");
         break;
     case 3:
-        denominateurS = SDL_LoadBMP("3.bmp");
+        denominateurS = SDL_LoadBMP("./images/3.bmp");
         break;
     case 4:
-        denominateurS = SDL_LoadBMP("4.bmp");
+        denominateurS = SDL_LoadBMP("./images/4.bmp");
         break;
     case 5:
-        denominateurS = SDL_LoadBMP("5.bmp");
+        denominateurS = SDL_LoadBMP("./images/5.bmp");
         break;
     case 6:
-        denominateurS = SDL_LoadBMP("6.bmp");
+        denominateurS = SDL_LoadBMP("./images/6.bmp");
         break;
     case 8:
-        denominateurS = SDL_LoadBMP("8.bmp");
+        denominateurS = SDL_LoadBMP("./images/8.bmp");
         break;
     }
 
